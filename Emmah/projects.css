@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.projects, .achievements {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.project-item, .achievement-item {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item img, .achievement-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover img, .achievement-item:hover img {
+  transform: scale(1.1);
+}
+
+.project-item .project-info, .achievement-item .achievement-info {
+  display: none;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-item:hover .project-info, .achievement-item:hover .achievement-info {
+  display: block;
+  opacity: 1;
+}
+
+.project-frame, .achievement-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #333;
+  z-index: -1;
+}
+
+.shape1 .project-frame, .shape1 .achievement-frame {
+  border-radius: 50%;
+}
+
+.shape2 .project-frame, .shape2 .achievement-frame {
+  border-radius: 10px;
+}
+
+.shape3 .project-frame, .shape3 .achievement-frame {
+  border-radius: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
